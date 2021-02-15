@@ -4,11 +4,11 @@ let json = '{"group": "G4", "academy": "SEDC", "numberOfStudents": 23}';
 
 // Parse the json text file into JS object
 let jsObject = JSON.parse(json);
-// console.log("JS Object", jsObject);
+//console.log("JS Object", jsObject);
 jsObject['course'] = "JS Advance"; // Mutable type
 // Form js object to json
 let newJson = JSON.stringify(jsObject);
-// console.log("New JSON", newJson);
+console.log("New JSON", newJson);
 
 // How to XML request and return response
 document.getElementById("xmlHttpRequest").addEventListener("click", function () {
@@ -144,5 +144,6 @@ document.getElementById("deleteRandomPost").addEventListener('click', function()
     })
     .then(response => response.json())
     .then(deletedPost => console.log(`The randomNumber is ${randomNumber}, and will delete the post`, deletedPost))
+
     .catch(error => console.error(error));
 })
